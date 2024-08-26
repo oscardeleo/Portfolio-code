@@ -3,70 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Listing</title>
+    <title>Car cafe listing code demo</title>
     <style>
         body {
-            font-family: Times Roman, sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
+
         .container {
-            width: 100%;
+            width: 90%;
             max-width: 1200px;
             margin: 20px auto;
             background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background-color: #0078d7;
-            color: #fff;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
             text-align: center;
+            margin-bottom: 20px;
         }
+
         .header h1 {
-            margin: 0;
             font-size: 36px;
+            margin: 0;
+            color: #007BFF;
         }
-        .gallery {
+
+        .image-container {
             display: flex;
             justify-content: center;
-            padding: 20px;
-            background-color: #f8f8f8;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
         }
-        .gallery img {
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        .image-container img, .image-container video {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 8px;
         }
-        .details {
-            padding: 20px;
+
+        .image-container .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
         }
-        .details h2 {
-            font-size: 28px;
-            color: #0078d7;
+
+        .nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            pointer-events: all;
+            cursor: pointer;
         }
-        .details ul {
-            list-style-type: none;
+
+        .features, .description, .financing, .test-drive {
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style: none;
             padding: 0;
+        }
+
+        .features ul li {
             font-size: 18px;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
         }
-        .details ul li {
-            padding: 5px 0;
+
+        .features ul li::before {
+            content: "✔";
+            color: #007BFF;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
-        .description {
-            padding: 20px;
-            background-color: #f1f1f1;
-            border-radius: 10px;
-            margin: 20px;
-        }
+
         .description p {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
+        }
+
+        .financing, .test-drive {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .financing h2, .test-drive h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .financing p, .test-drive p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .financing button, .test-drive button {
+            background-color: #fff;
+            color: #007BFF;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .financing button:hover, .test-drive button:hover {
+            background-color: #007BFF;
+            color: #fff;
+            border-color: #fff;
         }
         .cta {
             text-align: center;
@@ -91,51 +154,108 @@
             background-color: #f8f8f8;
             color: #666;
         }
-    </style>
+        </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>2019 Ford Mustang GT Premium</h1>
-        </div>
 
-        <!-- Image Gallery -->
-        <div class="gallery">
-            <img src="https://bringatrailer.com/wp-content/uploads/2022/08/2019_ford_gt_img_5497-lowres-31840.jpg?fit=940%2C627" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 940px; height: 372px; margin: 0px; width: 557px;" alt="900-Mile 2019 Ford GT for sale on BaT Auctions - closed on October 9, 2022  (Lot #86,722) | Bring a Trailer" jsname="kn3ccd" aria-hidden="false">
-        </div>
+<div class="container">
+    <!-- Header for Vehicle Name -->
+    <div class="header">
+        <h1>2024 Ford Mustang GT</h1>
+    </div>
 
-        <!-- Vehicle Details -->
-        <div class="details">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Engine: 5.0L V8</li>
-                <li>Transmission: 10-Speed Automatic</li>
-                <li>Mileage: 25,000 miles</li>
-                <li>Exterior Color: Shadow Black</li>
-                <li>Interior Color: Ebony Leather</li>
-                <li>Clean Title, One Owner</li>
-            </ul>
-        </div>
-
-        <!-- Vehicle Description -->
-        <div class="description">
-            <h2>Vehicle Description</h2>
-            <p>
-                This 2019 Ford Mustang GT Premium offers an exhilarating driving experience with its powerful 5.0L V8 engine and smooth 10-speed automatic transmission. The vehicle is in excellent condition, with only 25,000 miles on the odometer. The Shadow Black exterior paired with Ebony Leather interior creates a sleek and stylish look. This Mustang is a one-owner vehicle with a clean title, well-maintained, and ready for its next adventure. Don t miss out on this opportunity to own a piece of American muscle car history!
-            </p>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="cta">
-            <a href="your-purchase-link-url">Buy It Now!</a>
-        </div>
-
-        <!-- Footer Section -->
-        <div class="footer">
-            <p>Contact us at (555) 123-4567. Email us at sales@yourdealership.com or visit our <a href="https://www.carcafe-tx.com/default">website</a> </p>
-            <p>&copy; 2024 Your Dealership Name. All rights reserved.</p>
+    <!-- Image/Video Container with Navigation -->
+    <div class="image-container">
+        <img id="currentImage" src="image1.jpg" alt="Vehicle Image here">
+        <video id="currentVideo" src="video1.mp4" controls style="display: none;"></video>
+        <div class="nav">
+            <button onclick="prev()">&#10094;</button>
+            <button onclick="next()">&#10095;</button>
         </div>
     </div>
+
+    <!-- Key Features Section -->
+    <div class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>5.0L V8 Engine</li>
+            <li>450 HP</li>
+            <li>10-Speed Automatic Transmission</li>
+            <li>Premium Sound System</li>
+            <li>Leather Interior</li>
+        </ul>
+    </div>
+
+    <!-- Vehicle Description Section -->
+    <div class="description">
+        <h2>Description</h2>
+        <p>
+            This 2024 Ford Mustang GT is the perfect combination of performance and style. With a powerful 5.0L V8 engine 
+            and a sleek design, this car is built to turn heads. Whether you're cruising down the highway or taking it to 
+            the track, the Mustang GT delivers an exhilarating driving experience. Inside, you'll find a luxurious leather 
+            interior with a premium sound system, making every drive as enjoyable as possible.
+        </p>
+    </div>
+
+    <!-- Financing Information Section -->
+    <div class="financing">
+        <h2>Financing Information</h2>
+        <p>Flexible financing options available! Apply now and get pre-approved for your dream car.</p>
+        <a href='YOUR_LINK_HERE'>
+            <button>Apply for Financing</button>
+        </a>
+    </div>
+
+  <!-- Test Drive Scheduling Section -->
+<div class='test-drive'>
+    <h2>Schedule a Test Drive</h2>
+    <p>Want to experience the thrill of the Mustang GT? Schedule your test drive today!</p>
+    <a href='YOUR_LINK_HERE'>
+        <button>Schedule a Test Drive</button>
+    </a>
+</div>
+
+<script>
+    let images = ['	https://www.motortrend.com/uploads/2023/08/008-202…Premium-Performance-pack-front-three-quarters.jpg', 'https://www.bkford.com/blogs/2764/wp-content/uploads/2024/05/24_FRD_MST_S5A0331_1e_V2.jpg', '	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQExSo2cUn64xe5ih_EkZCqzbLp8kWmzFZ8RA&s'];
+    let videos = ['video1.mp4', 'video2.mp4'];
+    let currentIndex = 0;
+    let isImage = true;
+
+    function showMedia(index) {
+        let imgElement = document.getElementById('currentImage');
+        let videoElement = document.getElementById('currentVideo');
+
+        if (isImage) {
+            imgElement.src = images[index];
+            imgElement.style.display = 'block';
+            videoElement.style.display = 'none';
+        } else {
+            videoElement.src = videos[index];
+            imgElement.style.display = 'none';
+            videoElement.style.display = 'block';
+        }
+    }
+
+    function prev() {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showMedia(currentIndex);
+    }
+
+    function next() {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showMedia(currentIndex);
+    }
+</script>
+
+<!-- Call to Action -->
+<div class="cta">
+    <a href="your-purchase-link-url">Buy It Now!</a>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Contact us at (555) 123-4567. Email us at sales@yourdealership.com or visit our <a href="https://www.carcafe-tx.com/default">website</a> </p>
+    <p>&copy; 2024 Car Cafe. All rights reserved.</p>
+</div>
 </body>
 </html>
