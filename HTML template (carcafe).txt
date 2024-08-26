@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Listing</title>
+    <style>
+        body {
+            font-family: Times Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .gallery img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .details {
+            padding: 20px;
+        }
+        .details h2 {
+            font-size: 28px;
+            color: #0078d7;
+        }
+        .details ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+        }
+        .details ul li {
+            padding: 5px 0;
+        }
+        .description {
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .description p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .cta {
+            text-align: center;
+            padding: 20px;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #0078d7;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta a:hover {
+            background-color: #005a9e;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>2019 Ford Mustang GT Premium</h1>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <img src="https://bringatrailer.com/wp-content/uploads/2022/08/2019_ford_gt_img_5497-lowres-31840.jpg?fit=940%2C627" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 940px; height: 372px; margin: 0px; width: 557px;" alt="900-Mile 2019 Ford GT for sale on BaT Auctions - closed on October 9, 2022  (Lot #86,722) | Bring a Trailer" jsname="kn3ccd" aria-hidden="false">
+        </div>
+
+        <!-- Vehicle Details -->
+        <div class="details">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Engine: 5.0L V8</li>
+                <li>Transmission: 10-Speed Automatic</li>
+                <li>Mileage: 25,000 miles</li>
+                <li>Exterior Color: Shadow Black</li>
+                <li>Interior Color: Ebony Leather</li>
+                <li>Clean Title, One Owner</li>
+            </ul>
+        </div>
+
+        <!-- Vehicle Description -->
+        <div class="description">
+            <h2>Vehicle Description</h2>
+            <p>
+                This 2019 Ford Mustang GT Premium offers an exhilarating driving experience with its powerful 5.0L V8 engine and smooth 10-speed automatic transmission. The vehicle is in excellent condition, with only 25,000 miles on the odometer. The Shadow Black exterior paired with Ebony Leather interior creates a sleek and stylish look. This Mustang is a one-owner vehicle with a clean title, well-maintained, and ready for its next adventure. Don t miss out on this opportunity to own a piece of American muscle car history!
+            </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <a href="your-purchase-link-url">Buy It Now!</a>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Contact us at (555) 123-4567. Email us at sales@yourdealership.com or visit our <a href="https://www.carcafe-tx.com/default">website</a> </p>
+            <p>&copy; 2024 Your Dealership Name. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
